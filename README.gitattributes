@@ -1,0 +1,31 @@
+Este projeto está disponível para aulas do Centro Paula Sousa.
+
+LEMBRETE: Existem 2 arquivos executáveis.
+- Um no diretório lib (extensão .jar)
+- Outro no diretório catalogo-roupas-poo (extensao .exe)
+
+AVISO: É necessário conexão com a internet para execução com êxito!
+
+Caso ocorra problemas na conexão, procurar: src > dao.pecas > ConexaoDAO e renomear as seguintes variáveis
+String url = "jdbc:mysql:<seu local host>:3306/sql10209464"; // Endereço local para conexão.
+			String user = "<seu usuário>"; // Nome de usuário para login.
+			String pass = "<sua senha>"; // Senha de usuário para login.
+
+Ao usar um host local, será necessário criar uma nova base de dados, portanto, copie e cole no workbench do MySQL:
+
+CREATE DATABASE catalogo_roupas;
+
+USE catalogo_roupas;
+
+CREATE TABLE pecas (
+	id int not null AUTO_INCREMENT,
+	categoria varchar(10),
+	marca varchar(20),
+	cor varchar (20),
+	tamanho char(2),
+	descricao varchar(150),
+	preco varchar(8),
+	data varchar(10),
+	ajustada varchar(5),
+	PRIMARY KEY (id)
+);
